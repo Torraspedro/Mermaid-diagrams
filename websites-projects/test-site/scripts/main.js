@@ -9,14 +9,16 @@ myImage.onclick = () => {
   }
 };
 
+let myButton = document.querySelector("button");
+let myHeading = document.querySelector("h1");
+
 if (!localStorage.getItem("name")) {
   setUserName();
 } else {
   const storedName = localStorage.getItem("name");
   myHeading.textContent = `cats are cool, ${storedName}`;
 }
-let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
+
 
 function setUserName() {
   const myName = prompt("Please enter your name.");
